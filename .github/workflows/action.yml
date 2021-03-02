@@ -2,6 +2,11 @@ name: 'EUserv Auto Extend'
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - action
+  schedule:
+    - cron: '50 2 * * 3,6'
 
 jobs:
   auto_renew:
